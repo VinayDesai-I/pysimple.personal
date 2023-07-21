@@ -23,9 +23,9 @@ def gui_table():
         if event == "Add":
             
             data = [['banana',20,5],['bottles',200,4],['blah',10000,6]]
-            price = int(values["QTY"]) * int(data[int(values["ID"])][2])
+            price1 = int(values["QTY"]) * int(data[int(values["ID"])][2])
             price2.append(price1)
-            infotable.append([values["ID"], data[int(values["ID"])][0],values["QTY"],price])
+            infotable.append([values["ID"], data[int(values["ID"])][0],values["QTY"],price1])
             window["tablebill"].update(values = infotable)
 
         price = 0
