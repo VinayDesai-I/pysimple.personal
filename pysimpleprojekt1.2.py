@@ -24,6 +24,7 @@ def gui_table():
             
             data = [['banana',20,5],['bottles',200,4],['blah',10000,6]]
             price = int(values["QTY"]) * int(data[int(values["ID"])][2])
+            price2.append(price1)
             infotable.append([values["ID"], data[int(values["ID"])][0],values["QTY"],price])
             window["tablebill"].update(values = infotable)
 
