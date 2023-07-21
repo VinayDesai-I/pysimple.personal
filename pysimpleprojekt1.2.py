@@ -10,7 +10,7 @@ def gui_table():
     layout = [[gui.Text("Enter ID", size = (10,1)), gui.Input(key = "ID", do_not_clear = False)],
             [gui.Text("Enter Quantity", size = (10,1)), gui.Input(key = "QTY", do_not_clear = False)],
             [gui.Button("Add")],
-            [gui.Table(values =  infotable, headings = head, key = "tablebill", justification = "centre")]
+            [gui.Table(values =  infotable, headings = head, key = "tablebill", justification = "centre")],
             [gui.Text("Total Price:", size = (10,1)), gui.Text(" ", size = (10,1), key = "p")],
             [gui.Exit()]
         ]
