@@ -150,5 +150,4 @@ def gui_propmt2():
                             [gui.Table(values =  infotablebill, headings = head, key = "tablebill", justification = "centre")],
                             [gui.Text("Total Price:", size = (10,1)), gui.Text(" ", size = (10,1), key = "p")],
                             [gui.Button("Back", key = "back_selfcheckout"), gui.Button("Place Delivery", key = "delivery_selfcheckout")]
-    ]      
-#testline3333333
+    ]  
