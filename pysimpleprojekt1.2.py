@@ -173,3 +173,48 @@ def count_data() :
 
 write_data() 
 count_data() 
+
+def Push(stack, bk): 
+    stack.append(bk)
+    top = len(stack) - 1
+
+def Pop(stack):
+    if stack == []:
+        print ("Stack is empty") 
+    else:
+        print ("Book Removed is:", stack.pop())
+        
+def Display(stack)
+   if stack == []:
+       print("Stack is empty")
+   else:
+       top = len(stack) - 1
+       for i in range(top, -1, -1)
+       print(stk[i])
+
+stack = []
+while True:
+    print("STACK OPERATIONS", "\n1. Push Element", "\n2. Display stack","\n3. Pop Element", "\n4. Exit")
+    ch = int(input("Enter your choice:"))
+
+    if ch == 1:
+        bno = int(input("Enter Book no.:")
+        bname = input("Enter Book name:")
+        bk = [bno, bname]
+        Push(stack, bk)
+        input ()
+
+     elif ch == 2: 
+        Display(stack)
+        input()
+
+     elif ch == 3:
+        Pop(stack)
+        input()
+
+    elif ch == 4:
+        break
+        
+    else:
+       print ("Invalid choice !")
+       input()
