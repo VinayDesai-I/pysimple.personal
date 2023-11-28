@@ -151,3 +151,25 @@ def gui_propmt2():
                             [gui.Text("Total Price:", size = (10,1)), gui.Text(" ", size = (10,1), key = "p")],
                             [gui.Button("Back", key = "back_selfcheckout"), gui.Button("Place Delivery", key = "delivery_selfcheckout")]
     ]  
+
+import csv
+
+def write_data():
+    cf = open("record.csv", "a")
+    towrite = csv.writer(cf)
+    empid = int (input ("Enter Employee id:: "))
+    name = input ("Enter name :: ")
+    mobile = int (input ("Enter mobile number ::"))
+    list_field_elements = [empid, name, mobile]
+    towrite.writerow (list_field_elements)
+    cf.close()
+
+def count_data() :
+    cf = open("record.csv","r")
+    data = csv.reader(cf)
+    d = list(data)
+    print ("The no. of Records is:", len(d))
+    cf.close()
+
+write_data() 
+count_data() 
