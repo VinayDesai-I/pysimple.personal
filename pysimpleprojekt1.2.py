@@ -218,3 +218,25 @@ while True:
     else:
        print ("Invalid choice !")
        input()
+
+import mysql.connector as c
+db = c.connect(host ="localhost", user = "root", passwd="", database="")
+
+cur = db.cursor()
+
+cur.execute("create table employee (Emp_ID int, Emp_Name varchar (40), Emp_Desg varchar (20), Emp_Salary int)")
+q = '''insert into employee values (000, 'Ambani', 'CEO', 10000000), 
+                                   (001, 'Sachin', 'Head of Dept', 2000000),
+                                   (002, 'Rohit', 'Clerk', 1999), 
+                                   (003, 'Morgan', 'Umpire', 25000), 
+                                   (004, 'Surya', 'Batsman', 6000), 
+                                   (005, 'Bumrah', 'Bowler', 1500)'''
+cur.execute(q)
+db.commit()
+
+cur.execute("select * from employee")
+edata = cur.fetchall()
+
+for i in edata:
+    print("Employee ID:",i[0], "Employee Name",i[1], "Employee Designation:",i[2], "Employee Salary:", i[3])
+
